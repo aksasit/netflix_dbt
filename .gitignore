@@ -1,0 +1,9 @@
+\# Compiled dbt files
+target/
+dbt_packages/
+logs/
+.dbt_profile.yml # Your profile, which often contains credentials, should NOT be committed
+profiles.yml     # Also often contains credentials, generally don't commit
+.vscode/         # VS Code settings, if you don't want to share them
+*.log
+.env             # Environment variables file

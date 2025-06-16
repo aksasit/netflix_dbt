@@ -14,7 +14,8 @@ select
     RATING,
     RATING_TIMESTAMP
 from src_ratings
+where RATING is not null
 
 {% if is_incremental()%}
-    AND RATING_TIMESTAMP > (select MAX(RATING_TIMESTAMP)) from {{ this }}
+    AND RATING_TIMESTAMP > (select MAX(RATING_TIMESTAMP) from {{ this }})
 {% endif %}

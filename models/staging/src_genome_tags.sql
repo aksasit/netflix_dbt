@@ -1,5 +1,5 @@
 with raw_genome_tags as (
-    select * from netflix_db.raw.raw_genome_tags
+    select * from {{ source('raw_data', 'r_genome_tags')}}
 )
 select 
     TAG_ID,

@@ -1,6 +1,6 @@
 with raw_movies as
 (
-    select * from netflix_db.raw.raw_movies
+    select * from {{ source('raw_data', 'r_movies')}}
 )
 select 
     *

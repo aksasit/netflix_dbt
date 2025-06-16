@@ -1,5 +1,5 @@
 with raw_ratings as (
-    select * from netflix_db.raw.raw_ratings
+    select * from {{ source('raw_data', 'r_ratings')}}
 )
 
 select 

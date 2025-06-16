@@ -1,5 +1,5 @@
 with raw_genome_scores as (
-    select * from netflix_db.raw.raw_genome_scores
+    select * from {{ source('raw_data', 'r_genome_scores')}}
 )
 select 
     MOVIE_ID,

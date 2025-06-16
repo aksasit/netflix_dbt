@@ -1,5 +1,5 @@
 with raw_tags as (
-    select * from netflix_db.raw.raw_tags
+    select * from {{ source('raw_data', 'r_tags') }}
 )
 select 
     USER_ID,
